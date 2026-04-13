@@ -1,19 +1,22 @@
 .cube {
   width: 200px;
   height: 200px;
+  display: block; /* IMPORTANT */
 }
 
-/* Each face */
+/* faces */
 .front, .back, .left, .right, .top, .bottom {
   width: 100%;
   height: 100%;
 }
 
-/* Lines */
+/* lines */
 .line-1,
 .line-2,
 .line-3 {
   height: 33.3%;
   border: 1px solid black;
-  margin: 0; /* IMPORTANT (fix for 'auto' vs '0px' error) */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ensures proper sizing */
 }
